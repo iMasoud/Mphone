@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>NowTime.js</file>
+        <file>MphoneTopBar.qml</file>
+        <file>MphoneLauncher.qml</file>
+        <file>MphoneVirtualButtons.qml</file>
+        <file>Mtap.qml</file>
+        <file>back.png</file>
+        <file>home.png</file>
+        <file>options.png</file>
+        <file>Phone-icon.png</file>
+        <file>Drawer-icon.png</file>
+        <file>Messenger-icon.png</file>
+        <file>nexus_landscape.png</file>
+        <file>nexus_portrait.png</file>
+        <file>MphoneDock.qml</file>
+        <file>Phone-icon-highlight.png</file>
+    </qresource>
+</RCC>
