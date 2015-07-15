@@ -13,9 +13,9 @@
         <file>Phone-icon.png</file>
         <file>Drawer-icon.png</file>
         <file>Messenger-icon.png</file>
-        <file>nexus_landscape.png</file>
-        <file>nexus_portrait.png</file>
         <file>MphoneDock.qml</file>
         <file>Phone-icon-highlight.png</file>
+        <file>nexus_landscape.jpg</file>
+        <file>nexus_portrait.jpg</file>
     </qresource>
 </RCC>

@@ -8,9 +8,7 @@ Item
     {
         id:mphoneLauncher_wallapper
         anchors.fill:parent
-        sourceSize.width:width
-        sourceSize.height:height
-        source:(parent.width>parent.height)?"qrc:/nexus_landscape.png":"qrc:/nexus_portrait.png"
+        source:(parent.width>parent.height)?"qrc:/nexus_landscape.jpg":"qrc:/nexus_portrait.jpg"
     }
 
     MphoneTopBar
