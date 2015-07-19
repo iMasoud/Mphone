@@ -35,4 +35,3 @@ Item
         anchors.bottom:mphoneLauncher_virtualButtons.top
     }
 }
-

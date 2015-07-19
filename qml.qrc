@@ -15,8 +15,8 @@
         <file>Messenger-icon.png</file>
         <file>MphoneDock.qml</file>
         <file>Phone-icon-highlight.png</file>
-        <file>nexus_landscape.jpg</file>
-        <file>nexus_portrait.jpg</file>
         <file>Messenger-icon-highlight.png</file>
+        <file>iOS7_landscape.jpg</file>
+        <file>iOS7_portrait.jpg</file>
     </qresource>
 </RCC>
