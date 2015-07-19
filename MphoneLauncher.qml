@@ -8,7 +8,7 @@ Item
     {
         id:mphoneLauncher_wallapper
         anchors.fill:parent
-        source:(parent.width>parent.height)?"qrc:/iOS7_landscape.jpg":"qrc:/iOS7_portrait.jpg"
+        source:(parent.width>parent.height)?"qrc:/iPad.jpg":"qrc:/iPhone.jpg"
     }
 
     MphoneTopBar

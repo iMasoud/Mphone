@@ -16,11 +16,11 @@
         <file>MphoneDock.qml</file>
         <file>Phone-icon-highlight.png</file>
         <file>Messenger-icon-highlight.png</file>
-        <file>iOS7_landscape.jpg</file>
-        <file>iOS7_portrait.jpg</file>
         <file>clock-widget-hour.png</file>
         <file>clock-widget-minute.png</file>
         <file>MphoneClockWidget.qml</file>
         <file>arial.ttf</file>
+        <file>iPad.jpg</file>
+        <file>iPhone.jpg</file>
     </qresource>
 </RCC>

@@ -5,13 +5,14 @@ Item
 {
     id:root
 
-    property color hour_min_color: "white"
-    property color sec_color: "#fb9903"
-    property color pointers_color: "white"
+    property color analogue_hour_min_color: "white"
+    property color analogue_sec_color: "#fb9903"
+    property color analogue_pointers_color: "white"
+    property color date_color: "white"
 
     Item
     {
-        id:anlogue_root
+        id:anlogue
         width:height
         height:parent.height
 
@@ -28,7 +29,7 @@ Item
                 x:((parent.width/2-width/2)*(Math.cos((index*30)*Math.PI/180))+parent.height/2)-width/2
                 y:(-1*(parent.width/2-width/2)*(Math.sin((index*30)*Math.PI/180))+parent.height/2)-height/2
                 radius:width/2
-                color:pointers_color
+                color:analogue_pointers_color
             }
         }
 
@@ -42,21 +43,20 @@ Item
             anchors.bottomMargin: analogue_circle_white.height/2
             source:"qrc:/clock-widget-hour.png"
 
-            transform: Rotation
-                    {
-                        id: anlogue_hour_rotation
-                        origin.x:analogue_hour.width/2
-                        origin.y:analogue_hour.height
-                        angle:Now.Hours()%12*30+Now.Minutes()/2
+            transform: Rotation{
+                id: anlogue_hour_rotation
+                origin.x:analogue_hour.width/2
+                origin.y:analogue_hour.height
+                angle:Now.Hours()%12*30+Now.Minutes()/2
 
-                        Behavior on angle
-                        {
-                            RotationAnimation
-                            {
-                                direction:RotationAnimation.Shortest
-                            }
-                        }
+                Behavior on angle
+                {
+                    RotationAnimation
+                    {
+                        direction:RotationAnimation.Shortest
                     }
+                }
+            }
         }
 
         Image
@@ -69,21 +69,20 @@ Item
             anchors.bottomMargin: analogue_circle_white.height/2
             source:"qrc:/clock-widget-minute.png"
 
-            transform: Rotation
-                    {
-                        id: anlogue_minute_rotation
-                        origin.x:analogue_minute.width/2
-                        origin.y:analogue_minute.height
-                        angle:Now.Minutes()*6
+            transform: Rotation{
+                id: anlogue_minute_rotation
+                origin.x:analogue_minute.width/2
+                origin.y:analogue_minute.height
+                angle:Now.Minutes()*6
 
-                        Behavior on angle
-                        {
-                            RotationAnimation
-                            {
-                                direction:RotationAnimation.Shortest
-                            }
-                        }
+                Behavior on angle
+                {
+                    RotationAnimation
+                    {
+                        direction:RotationAnimation.Shortest
                     }
+                }
+            }
         }
 
         Rectangle
@@ -93,7 +92,7 @@ Item
             width:parent.width*0.04
             height:width
             radius:width/2
-            color:hour_min_color
+            color:analogue_hour_min_color
         }
 
         Rectangle
@@ -105,23 +104,22 @@ Item
             width:parent.width*0.01
             height:parent.height*17/30
             radius:width/2
-            color:sec_color
+            color:analogue_sec_color
 
-            transform: Rotation
+            transform: Rotation {
+                id: anlogue_second_rotation
+                origin.x:analogue_second.width/2
+                origin.y:analogue_second.height-analogue_second.height*3/17-analogue_circle_white.height/2
+                angle:Now.Seconds()*6
+
+                Behavior on angle
+                {
+                    RotationAnimation
                     {
-                        id: anlogue_second_rotation
-                        origin.x:analogue_second.width/2
-                        origin.y:analogue_second.height-analogue_second.height*3/17-analogue_circle_white.height/2
-                        angle:Now.Seconds()*6
-
-                        Behavior on angle
-                        {
-                            RotationAnimation
-                            {
-                                direction:RotationAnimation.Shortest
-                            }
-                        }
+                        direction:RotationAnimation.Shortest
                     }
+                }
+            }
         }
 
         Rectangle
@@ -131,7 +129,7 @@ Item
             width:analogue_circle_white.width/1.5
             height:width
             radius:width/2
-            color:sec_color
+            color:analogue_sec_color
         }
 
         Rectangle
@@ -156,6 +154,24 @@ Item
                 anlogue_minute_rotation.angle=Now.Minutes()*6
                 anlogue_hour_rotation.angle=Now.Hours()%12*30+Now.Minutes()/2
             }
+        }
+    }
+
+    Item
+    {
+        id:date
+        width:parent.width-parent.height
+        height:parent.height
+        x:parent.height
+
+        Text
+        {
+            id:date_dayOfWeek
+            text:Now.DayOfWeek()
+            font.pixelSize: parent.height/3
+            anchors.top:parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            color:date_color
         }
     }
 }
