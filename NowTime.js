@@ -11,3 +11,10 @@ function Minutes()
     var nowMinutes = nowDate.getMinutes();
     return nowMinutes;
 }
+
+function Seconds()
+{
+    var nowDate = new Date();
+    var nowSeconds = nowDate.getSeconds();
+    return nowSeconds;
+}

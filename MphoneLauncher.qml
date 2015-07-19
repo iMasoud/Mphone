@@ -8,7 +8,7 @@ Item
     {
         id:mphoneLauncher_wallapper
         anchors.fill:parent
-        source:(parent.width>parent.height)?"qrc:/nexus_landscape.jpg":"qrc:/nexus_portrait.jpg"
+        source:(parent.width>parent.height)?"qrc:/iOS7_landscape.jpg":"qrc:/iOS7_portrait.jpg"
     }
 
     MphoneTopBar
@@ -17,6 +17,15 @@ Item
         width:parent.width
         height:parent.height*0.038
         transparency:true
+    }
+
+    MphoneClockWidget
+    {
+        width:height*2.5
+        height:parent.height/5
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top:mphoneLauncher_topBar.bottom
+        anchors.topMargin:height/2
     }
 
     MphoneVirtualButtons
