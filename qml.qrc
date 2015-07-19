@@ -21,5 +21,6 @@
         <file>clock-widget-hour.png</file>
         <file>clock-widget-minute.png</file>
         <file>MphoneClockWidget.qml</file>
+        <file>arial.ttf</file>
     </qresource>
 </RCC>

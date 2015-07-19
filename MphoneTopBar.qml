@@ -10,6 +10,8 @@ Item
 
     id:mphoneTopBar_root
 
+    FontLoader {id:font_arial; source:"qrc:/arial.ttf"}
+
     Rectangle
     {
         id:mphoneTopBar_bg
@@ -30,7 +32,7 @@ Item
                 anchors.baselineOffset: -1*font.pixelSize*0.2
                 text:careerName
                 font.pixelSize: parent.height*0.857
-                font.family:"Arial"
+                font.family:font_arial.name
                 color:"white"
             }
 
@@ -41,7 +43,7 @@ Item
                 anchors.right:mphoneTopBar_antenna.left
                 text:careerGeneration
                 font.pixelSize: parent.height/2
-                font.family:"Arial"
+                font.family:font_arial.name
                 color:"white"
             }
 
@@ -137,7 +139,7 @@ Item
                 anchors.baselineOffset: -1*font.pixelSize*0.2
                 text:((Now.Hours()>12)?(Now.Hours()%12):(Now.Hours())) + ":" + ((Now.Minutes()>9)?"":"0") + Now.Minutes()
                 font.pixelSize: parent.height*0.857
-                font.family:"Arial"
+                font.family:font_arial.name
                 color:"white"
 
                 Timer
@@ -162,7 +164,7 @@ Item
                 anchors.baselineOffset: -1*font.pixelSize*0.2
                 text:(Now.Hours()>12)?"PM":"AM"
                 font.pixelSize: parent.height*0.75
-                font.family:"Arial"
+                font.family:font_arial.name
                 color:"white"
             }
         }
