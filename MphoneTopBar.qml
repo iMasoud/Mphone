@@ -16,7 +16,7 @@ Item
     {
         id:mphoneTopBar_bg
         anchors.fill:parent
-        color:Qt.rgba(0, 0, 0, (transparency==true)?0:1)
+        color:Qt.rgba(0, 0, 0, (transparency==true)?0:0.25)
 
         Item
         {

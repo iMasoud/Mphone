@@ -10,6 +10,9 @@ Item
     property color analogue_pointers_color: "white"
     property color date_color: "white"
 
+    FontLoader {id:font_bold; source:"qrc:/bold.ttf"}
+    FontLoader {id:font_heavy; source:"qrc:/heavy.ttf"}
+
     Item
     {
         id:anlogue
@@ -168,8 +171,22 @@ Item
         {
             id:date_dayOfWeek
             text:Now.DayOfWeek()
+            font.family:font_heavy.name
             font.pixelSize: parent.height/3
             anchors.top:parent.top
+            anchors.topMargin: height/3
+            anchors.horizontalCenter: parent.horizontalCenter
+            color:date_color
+        }
+
+        Text
+        {
+            id:date_date
+            text:Now.Year() + " " + Now.Month() + ", " + ((Now.Day()>10)?"":"0") + Now.Day()
+            font.family:font_bold.name
+            font.pixelSize: parent.height/3.5
+            anchors.bottom:parent.bottom
+            anchors.bottomMargin: parent.height/6
             anchors.horizontalCenter: parent.horizontalCenter
             color:date_color
         }

@@ -21,7 +21,7 @@ Item
 
     MphoneClockWidget
     {
-        width:height*2.5
+        width:height*2.5+((parent.width>0)?(parent.width-400)/10:0)
         height:parent.height/5
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top:mphoneLauncher_topBar.bottom

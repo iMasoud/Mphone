@@ -22,5 +22,7 @@
         <file>arial.ttf</file>
         <file>iPad.jpg</file>
         <file>iPhone.jpg</file>
+        <file>heavy.ttf</file>
+        <file>bold.ttf</file>
     </qresource>
 </RCC>
